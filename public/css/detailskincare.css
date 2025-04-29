@@ -1,0 +1,228 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    background-color: rgba(243, 243, 243, 0.27);
+}
+
+.navbar {
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000; 
+    width: 100%;
+    margin: 0; /* Menghapus margin */
+    padding: 0;
+    top: 0; /* Pastikan navbar berada di atas */
+    left: 0;
+}
+
+.navbar a {
+    float: left;
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar .logo img {
+    float: left;
+    height: 40px; 
+    width: auto;
+}
+
+.nav-link.active { 
+    color: #f0bfca;
+    font-weight: bold;
+}
+
+.container {
+    max-width: auto;
+    margin: 80px auto;
+    padding: 20px;
+    background: #f4eaeaaf;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skincare-detail {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: flex-start; /* Pastikan gambar dan info sejajar di atas */
+}
+
+.skincare-detail img {
+    width: 300px; /* Perbesar gambar */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Pastikan gambar tetap proporsional */
+}
+
+.skincare-info {
+    flex: 1; /* Isi ruang yang tersedia di sebelah gambar */
+}
+
+.skincare-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.skincare-info h2 {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.skincare-info p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.tab-menu {
+    display: flex;
+    border-radius: 20px; /* Radius untuk seluruh grup tab */
+    overflow: hidden; /* Agar radius terlihat menyatu */
+    border: 1px solid #ddd; /* Tambahkan border untuk grup tab */
+    width: 80%; /* Pastikan tab menu memenuhi lebar info */
+    background-color: rgba(255, 214, 214, 0.5);
+    box-sizing: border-box;
+    margin-left: 11%;
+}
+
+.tab-menu button {
+    flex: 1; /* Membuat semua tombol memiliki lebar yang sama */
+    padding: 10px 20px;
+    border: none;
+    background-color: rgba(255, 214, 214, 0.01);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tab-menu button:hover {
+    background-color: #efdbdb;
+    border-radius: 20px;
+}
+
+.tab-menu button.active {
+    background-color: #f9bfbf;
+    color: #050505;
+    border-radius: 20px; /* Radius untuk tab aktif */
+    margin: -1px; /* Pastikan border aktif tidak merusak tata letak */
+    z-index: 1; /* Pastikan tab aktif berada di atas */
+}
+
+.tab-content .tab {
+    display: none;
+    margin-top: 20px; /* Tambahkan jarak dari tab menu */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 0 0 20px 20px; /* Radius hanya untuk bagian bawah */
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(231, 58, 58, 0.2);
+    width: 80%; /* Pastikan lebar tab-content sama dengan tab-menu */
+    box-sizing: border-box;
+    margin-left: 11%;
+}
+
+.tab-content .tab.active {
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.footer {
+    background: rgba(242, 175, 175, 0.27);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Styling untuk Logo */
+.footer-section.logo {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 50px;
+}
+
+.footer-section.logo img {
+    width: 100px; /* Sesuaikan ukuran logo */
+}
+
+.footer-section.logo .tagline {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #000000; /* Warna emas untuk tagline */
+}
+
+/* Styling Kontak, Aplikasi, Sosial Media */
+.footer-section {
+    width: 25%;
+    text-align: left;
+    color: #000;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.footer-section a:hover {
+    color: #dfb2ca;
+}
+
+/* Styling ikon media sosial */
+.footer-section.sosial a i {
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+/* Gambar Aplikasi */
+.footer-section.aplikasi img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+/* Copyright */
+.footer-bottom {
+    background: #ebbfbf;
+    padding: 20px;
+    font-size: 14px;
+}

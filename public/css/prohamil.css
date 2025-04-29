@@ -1,0 +1,160 @@
+body {
+    background-image: url('/assets/img/roleHamil.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+/* Navbar */
+.navbar {
+    background-color: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a {
+    float: left;
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar .logo img {
+    float: left;
+    height: 40px; 
+    width: auto;
+}
+
+.profile-pic {
+    width: auto;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.title {
+    font-size:30px;
+    font-weight: bold;
+    color: #e8b1bd;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+
+/* Container Form */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Form Box */
+.form-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    width: 400px;
+}
+
+/* Form Input */
+.input-text {
+    width: 100%; /* Pastikan lebarnya sama */
+    padding: 12px; /* Padding yang sama */
+    margin-bottom: 25px ; /* Jarak antar elemen */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Sudut yang sama */
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    box-sizing: border-box; /* Pastikan padding tidak mempengaruhi ukuran */
+}
+
+/* Style untuk input tanggal */
+.date-input input[type="date"] {
+    width: 100%; /* Pastikan lebarnya sama */
+    padding: 12px; /* Padding yang sama */
+    margin-bottom: 25px ; /* Jarak antar elemen */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Sudut yang sama */
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    box-sizing: border-box; /* Pastikan padding tidak mempengaruhi ukuran */
+}
+
+input {
+    color: black; /* Warna teks menjadi hitam */
+}
+
+/* Menghilangkan efek default border saat input aktif (focus) */
+input:focus, 
+.date-input input:focus {
+    border: 1px solid rgb(232, 177, 189); /* Warna garis tepi saat mengisi */
+    outline: none; /* Menghilangkan efek outline biru pada browser */
+    box-shadow: 0 0 5px rgb(232, 177, 189, 0.5);
+}
+
+/* Mengubah warna placeholder (dd/mm/yyyy tetap abu-abu) */
+input::placeholder {
+    color: black; /* Warna abu-abu */
+}
+
+
+
+/* Tombol Daftar */
+button {
+    background-color: #e8b1bd;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #e6e5e5;
+}
+
+/* Untuk semua browser */
+input[type=number] {
+    appearance: textfield; /* Untuk browser modern */
+    -moz-appearance: textfield; /* Untuk Firefox */
+    -webkit-appearance: textfield; /* Untuk Chrome, Safari, Edge */
+}
+
+/* Khusus untuk WebKit-based browsers (Chrome, Safari, Edge) */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Khusus untuk Firefox */
+input[type=number]::-moz-inner-spin-button,
+input[type=number]::-moz-outer-spin-button {
+    -moz-appearance: none;
+    margin: 0;
+}
+
+
+
+ 

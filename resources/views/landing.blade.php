@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/landing.css">
+    <title>Belly Bloom</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="main.html" class="logo">
+            <img src="/assets/img/logo.png" alt="Logo Website">
+        </a>
+        <div class="menu">
+            <a href="main.html">Beranda</a>
+            <a href="landing.html" class="nav-link active">Fitur</a>
+            <a href="artikel.html">Artikel</a>
+            <a href="#kontak">Tentang Kami</a>
+            <a href="akun.html" class="fas fa-user-circle"></a>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="/assets/img/LdMom.jpg" alt="Gambar Banner">
+        <div class="text-overlay"> 
+            <h2>BellyBloom</h2>
+        </div>
+        <div class="text-overlay1">
+            <p>Sehat dan Cantik Saat Hamil</p>
+        </div>
+
+    </div>
+
+    <h1>
+        F I T U R
+    </h1>
+
+    <div class="container">
+        <a href="pantau.html" class="feature">
+            <h3>Perkembangan Janin</h3>
+            <img src="/assets/img/janin.jpg" alt="Gambar fitur">
+            <p>Pantau perkembangan janinmu</p>
+    </a>
+
+        <a href="skincare.html" class="feature">
+            <h3>Rekomendasi Skincare</h3>
+            <img src="/assets/img/fitskin.jpg" alt="Gambar fitur">
+            <p>Cari Skincaremu</p>
+        </a>
+
+        <a href="komunitas.html" class="feature">
+            <h3>Komunitas</h3>
+            <img src="/assets/img/kom.jpg" alt="Gambar fitur">
+            <p>Share pengalamanmu</p>
+        </a>
+    </div>
+
+    <h1>
+        ARTIKEL UNTUKMU
+    </h1>
+
+    <a href="artikel.html" class ="see">Lihat Semua</a>
+
+    <div class="container1"></div> <!-- Bagian untuk menampilkan artikel -->
+
+    <footer class="footer" id="kontak">
+        <div class="footer-container">
+            <!-- Bagian Logo dan Tagline -->
+            <div class="footer-section logo">
+                <img src="/assets/img/logoBB.png" alt="Belly Bloom Logo">
+                <p class="tagline">Sehat dan Cantik Saat Hamil</p>
+            </div>
+    
+            <!-- Bagian Kontak -->
+            <div class="footer-section kontak">
+                <h3>Kontak</h3>
+                <p>Email: support@bellybloom.com</p>
+                <p>Telepon: +62 812 3456 7890</p>
+                <p>Alamat: Jl. Mawar No. 123, Surabaya</p>
+            </div>
+    
+            <!-- Bagian Aplikasi -->
+            <div class="footer-section aplikasi">
+                <h3>Unduh Aplikasi</h3>
+                <a href="#"><img src="/assets/img/playstore.png" alt="Google Play"></a>
+                <a href="#"><img src="/assets/img/appstore.png" alt="App Store"></a>
+            </div>
+    
+            <!-- Bagian Sosial Media -->
+            <div class="footer-section sosial">
+                <h3>Ikuti Kami</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Belly Bloom. All Rights Reserved.</p>
+        </div>
+    </footer>    
+
+    <script src="/JS/landing.js"></script>
+
+
+</body>

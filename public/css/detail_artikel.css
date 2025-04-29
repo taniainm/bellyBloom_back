@@ -1,0 +1,184 @@
+/* Reset margin dan padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000; 
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.navbar a {
+    float: left;
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar .logo img {
+    float: left;
+    height: 40px; 
+    width: auto;
+}
+
+/* Kontainer artikel */
+.article-detail {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul artikel */
+.article-detail h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #000000fd;
+}
+
+/* Gambar artikel */
+.article-detail img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Tanggal artikel */
+.article-detail p:first-of-type {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Konten artikel */
+.article-detail p:last-of-type {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .article-detail {
+        padding: 15px;
+    }
+
+    .article-detail h1 {
+        font-size: 24px;
+    }
+
+    .article-detail p:last-of-type {
+        font-size: 16px;
+    }
+}
+
+
+.footer {
+    background: rgba(242, 175, 175, 0.27);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Styling untuk Logo */
+.footer-section.logo {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 50px;
+}
+
+.footer-section.logo img {
+    width: 100px; /* Sesuaikan ukuran logo */
+}
+
+.footer-section.logo .tagline {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #000000; /* Warna emas untuk tagline */
+}
+
+/* Styling Kontak, Aplikasi, Sosial Media */
+.footer-section {
+    width: 25%;
+    text-align: left;
+    color: #000;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.footer-section a:hover {
+    color: #dfb2ca;
+}
+
+/* Styling ikon media sosial */
+.footer-section.sosial a i {
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+/* Gambar Aplikasi */
+.footer-section.aplikasi img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+/* Copyright */
+.footer-bottom {
+    background: #ebbfbf;
+    padding: 20px;
+    font-size: 14px;
+}
+
+html {
+    scroll-behavior: smooth;
+}

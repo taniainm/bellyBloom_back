@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tata letak utama */
+body {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #cd9b9bc4;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    transform: translateX(0); /* Default tampil */
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%); /* Sembunyikan sidebar */
+}
+
+/* Konten utama */
+#content {
+    margin-left: 290px;
+    flex: 1;
+    transition: margin-left 0.3s ease;
+}
+
+#content.full-width {
+    margin-left: 0; /* Jika sidebar disembunyikan */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #cd9b9b;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    height: 50px;
+    z-index: 1000;
+}
+
+.navbar .form-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .form-input input {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.navbar .form-input button {
+    background-color: #a9b4c1;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbar .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Tombol toggle sidebar */
+.toggle-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+	border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background-color: #555;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    padding: 10px 0;
+}
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+.sidebar ul li a:hover {
+    background: #575757;
+    border-radius: 20px;
+}
+
+.dibuka{
+    background-color: #575757; 
+    color: white; 
+    width: 90%;
+    border-radius: 20px;
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+
+header {
+    background: white;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Styling untuk container kartu */
+.stats {
+	display: grid;
+	grid-template-columns: repeat(2,1fr); /* Dua kolom */
+	gap: 20px; /* Jarak antar kartu */
+	margin: 20px;
+  }
+  
+  /* Styling untuk kartu */
+  .card {
+	background-color: #e0cece; /* Warna latar belakang kartu */
+	border: 1px solid #ddd; /* Border abu-abu */
+	border-radius: 10px; /* Sudut melengkung */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+	padding: 20px; /* Ruang di dalam kartu */
+	text-align: center; /* Teks di tengah */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi hover */
+  }
+  
+  /* Hover efek untuk kartu */
+  .card:hover {
+	transform: translateY(-5px); /* Kartu naik sedikit */
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Bayangan lebih besar */
+  }
+  
+  /* Judul kartu */
+  .card h3 {
+	font-size: 18px;
+	color: #333; /* Warna teks */
+	margin-bottom: 10px;
+  }
+  
+  /* Deskripsi singkat */
+  .card p {
+	font-size: 24px; /* Ukuran angka */
+	font-weight: bold;
+	color: #000000f6; /* Warna biru */
+	margin: 0;
+  }

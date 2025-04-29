@@ -1,0 +1,315 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f5f5;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1000; 
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 14px 20px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar .logo img {
+  float: left;
+  height: 40px; 
+  width: auto;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.profile-pic {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+/* Main container */
+.main-container {
+  display: flex;
+  gap: 40px;
+  padding: 100px 100px;
+}
+
+/* Container KANAN */
+.right-container {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Left panel */
+.left-panel {
+  background-color: #fff;
+  flex: 1;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header-form {
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  font-size: 14px;
+  padding: 30px 0 10px;
+  padding-top: 0px;
+  padding-bottom: 30;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.user-info img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.label-topik {
+  background-color: #f1e6e6;
+  padding: 5px 14px;
+  border-radius: 15px;
+  font-size: 13px;
+  width: fit-content;
+}
+
+.tag-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px 10px;
+}
+
+.tag-button{
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 12px;
+  margin: 5px;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.tag-button:hover {
+  background-color: #e0e0e0;
+}
+
+.judul-cerita {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Right panel */
+.right-panel {
+  background-color: #fff;
+  flex: 1;
+  padding: 100px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.daftar-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.story-card {
+  background-color: #fdfcfc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.role-time {
+  font-size: 12px;
+  color: #777;
+}
+
+.interact {
+  display: flex;
+  gap: 15px;
+  font-size: 13px;
+  color: #888;
+}
+
+.form-action {
+  background: none;
+  border: none;
+  color: #444;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.form-action:hover {
+  color: #e17878;
+}
+
+/* Postinganmu Section */
+.postings-section {
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Kotak untuk tiap postingan */
+.post-item {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Header berisi avatar dan info user */
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.post-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.post-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-username {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.post-time {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Isi dan aksi */
+.post-content {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  color: #777;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.icon-button .feather {
+  stroke-width: 2.5;
+}
+.liked .feather {
+  fill: red;
+  stroke: red;
+}
+.post-actions span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.tag-selected-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap; 
+  gap: 10px; 
+  margin: 10px 0;
+}
+
+.tag-selected {
+  background-color: #ffe0e0;
+  flex-shrink: 0;
+  padding: 4px 8px; 
+  border: 1px solid #ff9a9a;
+  border-radius: 15px; /* Kurangi radius untuk tampilan lebih kecil */
+  font-size: 12px; /* Kurangi ukuran font */
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Kurangi jarak antara teks dan ikon */
+  width: fit-content; /* Sesuaikan lebar dengan panjang teks */
+}
+
+.remove-tag {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px; /* Sesuaikan ukuran font */
+}

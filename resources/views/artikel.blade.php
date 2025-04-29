@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/artikel.css">
+    <title>Artikel</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="main.html" class="logo">
+            <img src="/assets/img/logo.png" alt="Logo Website">
+        </a>
+        <div class="menu">
+            <a href="main.html">Beranda</a>
+            <a href="landing.html">Fitur</a>
+            <a href="artikel.html" class="nav-link active">Artikel</a>
+            <a href="#footer">Tentang Kami</a>
+            <a href="akun.html" class="fas fa-user-circle"></a>
+        </div>
+    </div>
+    <div class="search-container">
+        <input type="text" id="search-box" class="search-box" placeholder="Cari artikel...">
+        <i class="fas fa-search search-icon"></i>
+    </div>
+
+    <div class="content">
+    <div class="main-content">
+        <div class="main-article" id="main-article"></div> <!-- Ini akan diisi oleh JavaScript -->
+    
+        <div class="sidebar" id="sidebar"></div> <!-- Ini akan diisi oleh JavaScript -->
+    </div>
+    
+    <h2>Artikel Lainnya</h2>
+    <div class="article-container" id="article-container"></div> <!-- Ini akan diisi oleh JavaScript -->
+</div>
+
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <!-- Bagian Logo dan Tagline -->
+            <div class="footer-section logo">
+                <img src="/assets/img/logoBB.png" alt="Belly Bloom Logo">
+                <p class="tagline">Sehat dan Cantik Saat Hamil</p>
+            </div>
+    
+            <!-- Bagian Kontak -->
+            <div class="footer-section kontak">
+                <h3>Kontak</h3>
+                <p>Email: support@bellybloom.com</p>
+                <p>Telepon: +62 812 3456 7890</p>
+                <p>Alamat: Jl. Mawar No. 123, Surabaya</p>
+            </div>
+    
+            <!-- Bagian Aplikasi -->
+            <div class="footer-section aplikasi">
+                <h3>Unduh Aplikasi</h3>
+                <a href="#"><img src="/assets/img/playstore.png" alt="Google Play"></a>
+                <a href="#"><img src="/assets/img/appstore.png" alt="App Store"></a>
+            </div>
+    
+            <!-- Bagian Sosial Media -->
+            <div class="footer-section sosial">
+                <h3>Ikuti Kami</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Belly Bloom. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="/JS/artikel.js"></script>
+</body>
+</html>

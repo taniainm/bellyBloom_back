@@ -1,0 +1,340 @@
+/* skincare.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tata letak utama */
+body {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #cd9b9bc4;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  transform: translateX(0); /* Default tampil */
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%); /* Sembunyikan sidebar */
+}
+
+/* Konten utama */
+#content {
+  margin-left: 290px;
+  flex: 1;
+  transition: margin-left 0.3s ease;
+}
+
+#content.full-width {
+  margin-left: 0; /* Jika sidebar disembunyikan */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #cd9b9b;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 50px;
+}
+
+.navbar .form-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .form-input input {
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.navbar .form-input button {
+  background-color: #a9b4c1;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar .profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Tombol toggle sidebar */
+.toggle-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background-color: #555;
+}
+
+.sidebar h2 {
+  text-align: center;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  padding: 10px 0;
+}
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+.sidebar ul li a:hover {
+  background: #575757;
+  border-radius: 20px;
+}
+
+.dibuka{
+  background-color: #575757; 
+  color: white; 
+  width: 90%;
+  border-radius: 20px;
+}
+  
+  .container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #e88f9c;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+  }
+  
+  .filters label {
+    font-weight: bold;
+  }
+  
+  .filters select {
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+  }
+  
+  thead {
+    background-color: #ffd5da;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #fff4f5;
+  }
+  
+  
+  #btnTambah {
+    background-color: #eaacac; /* Warna pink */
+    color: white; /* Warna teks */
+    border: 1px solid #e3b5b5; /* Border pink lebih gelap */
+    border-radius: 20px; /* Sudut melengkung */
+    padding: 10px 20px; /* Padding untuk ukuran tombol */
+    font-size: 16px; /* Ukuran font */
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+    margin: 20px 0; /* Margin atas dan bawah untuk jarak antar widget */
+    transition: all 0.3s ease; /* Animasi transisi */
+  }
+  
+  #btnTambah:hover {
+    background-color: #ff6b6b; /* Warna lebih gelap saat hover */
+    border-color: #ff4c4c; /* Border lebih gelap saat hover */
+  }
+  
+.edit {
+    background-color: #ffa9b5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 12px;
+    cursor: pointer;
+  }
+
+  .edit:hover {
+    background-color: rgb(194, 106, 106);
+  }
+  
+.delete {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 12px;
+    cursor: pointer;
+  }
+  
+  .delete:hover {
+    background-color: #be2727;  
+  }
+
+  #formProduk {
+    padding: 20px;
+    border: 1px solid #ffb6c1;
+    border-radius: 10px;
+    background-color: #fff8f8;
+  }
+  
+  #formProduk h2 {
+    margin-top: 0;
+    color: #d85b70;
+  }
+  
+  #formProduk form {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+  }
+  
+  #formProduk label {
+    flex: none; 
+    margin-bottom: 5px;
+  }
+  
+  #formProduk input,
+  #formProduk select {
+    flex: 3 1 15px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+  }
+  
+  #formProduk .button-container {
+    display: flex; /* Gunakan Flexbox untuk tombol */
+    justify-content: flex-end; /* Tempatkan tombol di sebelah kanan */
+    gap: 10px; /* Tambahkan jarak antar tombol */
+  }
+
+  #formProduk button {
+    padding: 10px 20px;
+    background-color: #e88f9c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: fit-content;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #formProduk button:hover {
+    background-color: #d66c7a;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #formProduk form {
+      flex-direction: column;
+    }
+  
+    #formProduk label,
+    #formProduk input,
+    #formProduk select {
+      flex: 1 1 100%;
+    }
+  
+    .filters {
+      flex-direction: column;
+    }
+  }
+  .hidden {
+    display: none;
+  }  
+
+  /* Styling untuk textarea */
+textarea {
+    padding: 10px; /* Tambahkan padding untuk kenyamanan */
+    border: 1px solid #ccc; /* Border abu-abu */
+    border-radius: 10px; /* Sudut melengkung */
+    font-size: 14px; /* Ukuran font */
+    resize: vertical; /* Hanya bisa diubah ukuran secara vertikal */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+  }
+  
+  /* Styling untuk select (filter kulit dan kategori kulit) */
+  select {
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    font-size: 14px; 
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+    appearance: none; 
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23999' d='M2 0L0 2h4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+  }
+  
+  /* Styling untuk select saat di-hover */
+  select:hover {
+    border-color: #ff9a9a; /* Border berubah menjadi pink saat di-hover */
+  }
+  
+  /* Styling untuk select saat fokus */
+  select:focus {
+    outline: none; /* Hilangkan outline default */
+    border-color: #ff6b6b; /* Border berubah menjadi pink lebih gelap */
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5); /* Tambahkan efek glow */
+  }
