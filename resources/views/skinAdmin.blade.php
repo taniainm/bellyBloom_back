@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>Kelola Skincare Aman</title>
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="/CSS/skinAdmin.css">
@@ -12,14 +13,14 @@
   <div class="sidebar" id="sidebar">
     <h2>Admin Panel</h2>
     <ul>
-        <li><a href="admin.html">Dashboard</a></li>
-        <li><a href="pantauAdmin.html">Perkembangan Janin</a></li>
-        <li><a href="skinAdmin.html" class="dibuka">Skincare Aman</a></li>
-        <li><a href="artikelAdmin.html">Artikel</a></li>
-        <li><a href="komunAdmin.html">Komunitas</a></li>
-        <li><a href="pengguna.html">Pengguna</a></li>
-        <li><a href="laporanAdmin.html">Laporan</a></li>
-        <li><a href="setAdmin.html">Pengaturan</a></li>
+        <li><a href="/admin">Dashboard</a></li>
+        <li><a href="/perkembanganAdmin">Perkembangan Janin</a></li>
+        <li><a href="/skincareAdmin" class="dibuka">Skincare Aman</a></li>
+        <li><a href="/artikelAdmin">Artikel</a></li>
+        <li><a href="/komunitasAdmin">Komunitas</a></li>
+        <li><a href="/user">Pengguna</a></li>
+        <li><a href="/laporanAdmin">Laporan</a></li>
+        <li><a href="/setAdmin">Pengaturan</a></li>
     </ul>
 </div>
 
@@ -34,7 +35,7 @@
             </div>
         </form>
         <a href="#" class="profile">
-            <img src="/assets/img/fitskin.jpg">
+            <img src="../img/fitskin.jpg">
         </a>
     </nav>
 
@@ -45,6 +46,7 @@
       <label for="kategori">Filter Kulit:</label>
       <select id="kategori">
         <option value="all">Semua</option>
+        <option value="normal">Kulit Normal</option>
         <option value="sensitif">Kulit Sensitif</option>
         <option value="berjerawat">Berjerawat</option>
         <option value="berminyak">Berminyak</option>
@@ -74,17 +76,19 @@
   <!-- Form tambah produk -->
   <div id="formProduk" class="hidden">
     <h2 id="formTitle">Tambah Produk</h2>
-    <form>
-      <input id="nama" type="text" placeholder="Nama Produk" />
-      <input id="brand" type="text" placeholder="Brand" />
-      <input id="jenis" type="text" placeholder="Jenis Produk" />
-      <input id="kandungan" type="text" placeholder="Kandungan" />
-      <input id="harga" type="number" placeholder="Harga" />
-      <input id="gambar" type="text" placeholder="URL Gambar" />
-      <textarea id="deskripsi" placeholder="Deskripsi"></textarea>
-      <textarea id="caraPakai" placeholder="Cara Pakai"></textarea>
-      <select id="kulit" placeholder="Kategori Kulit">
+    <form id="formBarang" enctype="multipart/form-data">
+      <input id="nama" type="text" placeholder="Nama Produk" name="nama"/>
+      <input id="brand" type="text" placeholder="Brand" name="brand"/>
+      <input id="jenis" type="text" placeholder="Jenis Produk" name="jenis"/>
+      <input id="kandungan" type="text" placeholder="Kandungan" name="kandungan"/>
+      <input id="harga" type="number" placeholder="Harga" name="harga"/>
+      <textarea id="deskripsi" placeholder="Deskripsi" name="deskripsi"></textarea>
+      <textarea id="caraPakai" placeholder="Cara Pakai" name="cara_pakai"></textarea>
+      <label>Upload Gambar: <input id="gambar" type="file" accept="image/*" name="gambar"/> </label>
+      <select id="kulit" placeholder="Kategori Kulit" name="kategori_kulit">
         <option value="" disabled selected>Pilih Kategori Kulit</option>
+        <option value="semua">Semua</option>
+        <option value="normal">Normal</option>
         <option value="sensitif">Sensitif</option>
         <option value="berjerawat">Berjerawat</option>
         <option value="berminyak">Berminyak</option>

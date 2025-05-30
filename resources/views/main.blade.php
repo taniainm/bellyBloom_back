@@ -10,12 +10,12 @@
 <body>
         <!-- Navbar -->
         <div class="navbar">
-            <a href="main.html" class="logo">
+            <a href="/main" class="logo">
                 <img src="img/logo.png" alt="Logo Website">
             </a>
             <div class="menu">  
                 <a href="/main" class="nav-link active" >Beranda</a>
-                <a href="landing.html">Fitur</a>
+                <a href="/home">Fitur</a>
                 <a href="/artikel">Artikel</a>
                 <a href="#kontak">Tentang Kami</a>
                 <a href="/login" class="btn-login">Login</a>
@@ -29,7 +29,7 @@
                 <h2 id="belly">di Belly Bloom</h2>
                 <p><b>Sehat & Cantik Saat Hamil</b></p>
                 <p>Pantau kehamilan, jaga kesehatan, dan tetap cantik selama masa hamil.</p>
-                <button id="started" onclick="window.location.href='login.html'">Get Started</button>
+                <button id="started" onclick="window.location.href='/login'">Get Started</button>
             </div>
         </div>
 

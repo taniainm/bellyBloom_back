@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Admin - Perkembangan Janin</title>
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="/CSS/pantauAdmin.css" />
+  <link rel="stylesheet" href="/css/pantauAdmin.css" />
 </head>
 <body>
     <div class="sidebar" id="sidebar">
         <h2>Admin Panel</h2>
         <ul>
-            <li><a href="admin.html">Dashboard</a></li>
-            <li><a href="pantauAdmin.html" class="dibuka">Perkembangan Janin</a></li>
-            <li><a href="skinAdmin.html">Skincare Aman</a></li>
-            <li><a href="artikelAdmin.html">Artikel</a></li>
-            <li><a href="komunAdmin.html">Komunitas</a></li>
-            <li><a href="pengguna.html">Pengguna</a></li>
-            <li><a href="laporanAdmin.html">Laporan</a></li>
-            <li><a href="setAdmin.html">Pengaturan</a></li>
+            <li><a href="/admin">Dashboard</a></li>
+            <li><a href="/perkembanganAdmin" class="dibuka">Perkembangan Janin</a></li>
+            <li><a href="/skincareAdmin">Skincare Aman</a></li>
+            <li><a href="/artikelAdmin">Artikel</a></li>
+            <li><a href="/komunitasAdmin">Komunitas</a></li>
+            <li><a href="/user">Pengguna</a></li>
+            <li><a href="/laporanAdmin">Laporan</a></li>
+            <li><a href="/setAdmin">Pengaturan</a></li>
         </ul>
     </div>
     
@@ -33,7 +34,7 @@
                 </div>
             </form>
             <a href="#" class="profile">
-                <img src="/assets/img/fitskin.jpg">
+                <img src="/img/fitskin.jpg">
             </a>
         </nav>
 
@@ -48,22 +49,24 @@
   <div id="modalForm" class="modal hidden">
     <div class="modal-content">
       <h2 id="formTitle">Tambah / Edit Info</h2>
-      <form id="weekForm">
-        <label>Minggu Ke- <input type="number" id="minggu" required /></label>
-        <label>Berat: <input type="text" id="berat" required /></label>
-        <label>Panjang: <input type="text" id="panjang" required /></label>
-        <label>Detak Jantung: <input type="text" id="detak" required /></label>
-        <label>Deskripsi: <textarea id="deskripsi" rows="4" required></textarea></label>
-        <label>Upload Gambar: <input type="file" id="gambarInput" accept="image/*" /></label>
+      <form id="weekForm" method="POST" enctype="multipart/form-data">
+    @csrf
+        <input type="hidden" name="_method" id="methodField" value="POST">
+        <label>Minggu Ke- <input type="number" name="minggu" id="minggu" required /></label>
+        <label>Berat: <input type="text" name="berat" id="berat" required /></label>
+        <label>Panjang: <input type="text" name="panjang" id="panjang" required /></label>
+        <label>Detak Jantung: <input type="text" name="detak" id="detak" required /></label>
+        <label>Deskripsi: <textarea name="deskripsi" id="deskripsi" rows="4" required></textarea></label>
+        <label>Upload Gambar: <input type="file" name="gambar" accept="image/*" /></label>
         <div class="form-buttons">
         <button type="submit">Simpan</button>
         <button type="button" id="cancelBtn">Batal</button>
     </div>
-      </form>
+</form>
     </div>
   </div>
     </section>
 
-  <script src="/JS/pantauAdmin.js"></script>
+  <script type="module" src="/js/pantauAdmin.js"></script>
 </body>
 </html>

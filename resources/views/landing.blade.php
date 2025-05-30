@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="/CSS/landing.css">
+    <link rel="stylesheet" href="/css/landing.css">
     <title>Belly Bloom</title>
 </head>
 <body>
     <div class="navbar">
-        <a href="main.html" class="logo">
-            <img src="/assets/img/logo.png" alt="Logo Website">
+        <a href="/main" class="logo">
+            <img src="/img/logo.png" alt="Logo Website">
         </a>
         <div class="menu">
-            <a href="main.html">Beranda</a>
-            <a href="landing.html" class="nav-link active">Fitur</a>
-            <a href="artikel.html">Artikel</a>
+            <a href="/main">Beranda</a>
+            <a href="/home" class="nav-link active">Fitur</a>
+            <a href="/artikel">Artikel</a>
             <a href="#kontak">Tentang Kami</a>
-            <a href="akun.html" class="fas fa-user-circle"></a>
+            <a href="/akun" class="fas fa-user-circle"></a>
         </div>
     </div>
 
     <div class="banner">
-        <img src="/assets/img/LdMom.jpg" alt="Gambar Banner">
+        <img src="/img/LdMom.jpg" alt="Gambar Banner">
         <div class="text-overlay"> 
             <h2>BellyBloom</h2>
         </div>
@@ -37,21 +37,21 @@
     </h1>
 
     <div class="container">
-        <a href="pantau.html" class="feature">
+        <a href="/pantau" class="feature">
             <h3>Perkembangan Janin</h3>
-            <img src="/assets/img/janin.jpg" alt="Gambar fitur">
+            <img src="/img/janin.jpg" alt="Gambar fitur">
             <p>Pantau perkembangan janinmu</p>
     </a>
 
-        <a href="skincare.html" class="feature">
+        <a href="/skincare" class="feature">
             <h3>Rekomendasi Skincare</h3>
-            <img src="/assets/img/fitskin.jpg" alt="Gambar fitur">
+            <img src="/img/fitskin.jpg" alt="Gambar fitur">
             <p>Cari Skincaremu</p>
         </a>
 
-        <a href="komunitas.html" class="feature">
+        <a href="/komunitas" class="feature">
             <h3>Komunitas</h3>
-            <img src="/assets/img/kom.jpg" alt="Gambar fitur">
+            <img src="/img/kom.jpg" alt="Gambar fitur">
             <p>Share pengalamanmu</p>
         </a>
     </div>
@@ -60,7 +60,7 @@
         ARTIKEL UNTUKMU
     </h1>
 
-    <a href="artikel.html" class ="see">Lihat Semua</a>
+    <a href="/artikel" class ="see">Lihat Semua</a>
 
     <div class="container1"></div> <!-- Bagian untuk menampilkan artikel -->
 
@@ -68,7 +68,7 @@
         <div class="footer-container">
             <!-- Bagian Logo dan Tagline -->
             <div class="footer-section logo">
-                <img src="/assets/img/logoBB.png" alt="Belly Bloom Logo">
+                <img src="/img/logoBB.png" alt="Belly Bloom Logo">
                 <p class="tagline">Sehat dan Cantik Saat Hamil</p>
             </div>
     
@@ -83,8 +83,8 @@
             <!-- Bagian Aplikasi -->
             <div class="footer-section aplikasi">
                 <h3>Unduh Aplikasi</h3>
-                <a href="#"><img src="/assets/img/playstore.png" alt="Google Play"></a>
-                <a href="#"><img src="/assets/img/appstore.png" alt="App Store"></a>
+                <a href="#"><img src="/img/playstore.png" alt="Google Play"></a>
+                <a href="#"><img src="/img/appstore.png" alt="App Store"></a>
             </div>
     
             <!-- Bagian Sosial Media -->

@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kelola Artikel Kesehatan</title>
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="/CSS/artikelAdmin.css">
+  <link rel="stylesheet" href="/css/artikelAdmin.css">
 </head>
 <body>
 
   <div class="sidebar" id="sidebar">
     <h2>Admin Panel</h2>
     <ul>
-        <li><a href="admin.html">Dashboard</a></li>
-        <li><a href="pantauAdmin.html">Perkembangan Janin</a></li>
-        <li><a href="skinAdmin.html">Skincare Aman</a></li>
-        <li><a href="artikelAdmin.html" class="dibuka">Artikel</a></li>
-        <li><a href="komunAdmin.html">Komunitas</a></li>
-        <li><a href="pengguna.html">Pengguna</a></li>
-        <li><a href="laporanAdmin.html">Laporan</a></li>
-        <li><a href="setAdmin.html">Pengaturan</a></li>
+        <li><a href="/admin">Dashboard</a></li>
+        <li><a href="/perkembanganAdmin">Perkembangan Janin</a></li>
+        <li><a href="/skincareAdmin">Skincare Aman</a></li>
+        <li><a href="/artikelAdmin" class="dibuka">Artikel</a></li>
+        <li><a href="/komunitasAdmin">Komunitas</a></li>
+        <li><a href="/user">Pengguna</a></li>
+        <li><a href="/laporanAdmin">Laporan</a></li>
+        <li><a href="/setAdmin">Pengaturan</a></li>
     </ul>
 </div>
 
@@ -34,7 +34,7 @@
             </div>
         </form>
         <a href="#" class="profile">
-            <img src="/assets/img/fitskin.jpg">
+            <img src="/img/fitskin.jpg">
         </a>
     </nav>
 

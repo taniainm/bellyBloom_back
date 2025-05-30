@@ -1,5 +1,7 @@
 body {
-    background-image: url('/assets/img/backLog.jpg');
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     color: #000;
     margin: 0;

@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ubah Password</title>
-    <link rel="stylesheet" href="/CSS/password.css">
+    <link rel="stylesheet" href="/css/password.css">
 </head>
 <body>
     <!-- Navbar -->
     <div class="navbar">
-        <a href="main.html" class="logo">
-            <img src="/assets/img/logo.png" alt="Logo Website">
+        <a href="/main" class="logo">
+            <img src="/img/logo.png" alt="Logo Website">
         </a>
         <div class="menu">
             <a href="#beranda">Beranda</a>
             <a href="#fitur">Fitur</a>
             <a href="#artikel">Artikel</a>
             <a href="#tentang">Tentang Kami</a>
-            <img class="profile-pic" src="/assets/img/ava.png" alt="Profile">
+            <img class="profile-pic" src="/img/ava.png" alt="Profile">
         </div>
     </div>
 
@@ -27,10 +27,10 @@
         <div class="sidebar">
             <button class="sidebar-btn">Pengaturan</button>
             <ul class="sidebar-menu">
-                <li>Akun</li>
+                <li><a href="/akun">Akun</a></li>
                 <li class="active">Ubah password</li>
-                <li>Hapus akun</li>
-                <li>Log out</li>
+                <li><button id="deleteAccountBtn">Hapus akun</button></li>
+                <li><a href="#" id="logoutBtn">Log out</a></li>
             </ul>
         </div>
 
@@ -39,7 +39,7 @@
             <h1>Password</h1>
             <div class="card card-flex">
                 <div class="password-avatar">
-                    <img src="/assets/img/ava.png" alt="Avatar" class="avatar-big">
+                    <img src="/img/ava.png" alt="Avatar" class="avatar-big">
                 </div>
                 <form>
                     <label for="password-lama">Password saat ini</label>
@@ -56,5 +56,20 @@
             </div>
         </div>
     </div>
+
+    <div id="confirmModal" class="modal">
+    <div class="modal-content">
+        <h3>Konfirmasi Penghapusan Akun</h3>
+        <p>Apakah Anda yakin ingin menghapus akun? Semua data akan dihapus permanen dan tidak dapat dikembalikan.</p>
+        <div class="modal-buttons">
+            <button id="confirmDeleteBtn">Ya, Hapus</button>
+            <button id="cancelDeleteBtn">Batal</button>
+        </div>
+    </div>
+</div>
+
+
+<script type="module" src="/js/firebase-init.js"></script>
+<script type="module" src="/js/password.js"></script>
 </body>
 </html>

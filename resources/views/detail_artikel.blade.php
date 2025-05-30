@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="/CSS/detail_artikel.css">
+    <link rel="stylesheet" href="/css/detail_artikel.css">
     <title>Detail Artikel</title>
 </head>
 <body>
     <div class="navbar">
-        <a href="main.html" class="logo">
-            <img src="/assets/img/logo.png" alt="Logo Website">
+        <a href="/main" class="logo">
+            <img src="/img/logo.png" alt="Logo Website">
         </a>
         <div class="menu">
             <a href="#search"><i class="fas fa-search"></i></a>
             <a href="#beranda">Beranda</a>
-            <a href="landing.html">Fitur</a>
-            <a href="artikel.html">Artikel</a>
+            <a href="/home">Fitur</a>
+            <a href="/artikel">Artikel</a>
             <a href="#kontak">Tentang Kami</a>
             <a href="#profil" class="fas fa-user-circle"></a>
         </div>
@@ -31,7 +31,7 @@
         <div class="footer-container">
             <!-- Bagian Logo dan Tagline -->
             <div class="footer-section logo">
-                <img src="/assets/img/logoBB.png" alt="Belly Bloom Logo">
+                <img src="/img/logoBB.png" alt="Belly Bloom Logo">
                 <p class="tagline">Sehat dan Cantik Saat Hamil</p>
             </div>
     
@@ -46,8 +46,8 @@
             <!-- Bagian Aplikasi -->
             <div class="footer-section aplikasi">
                 <h3>Unduh Aplikasi</h3>
-                <a href="#"><img src="/assets/img/playstore.png" alt="Google Play"></a>
-                <a href="#"><img src="/assets/img/appstore.png" alt="App Store"></a>
+                <a href="#"><img src="/img/playstore.png" alt="Google Play"></a>
+                <a href="#"><img src="/img/appstore.png" alt="App Store"></a>
             </div>
     
             <!-- Bagian Sosial Media -->

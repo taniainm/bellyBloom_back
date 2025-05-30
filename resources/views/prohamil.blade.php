@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/prohamil.css">
+    <link rel="stylesheet" href="/css/prohamil.css">
     <title>Profil Ibu Hamil</title>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js"></script>
+
 </head>
-<body>
+<body style="background: url('img/roleHamil.jpg'); background-size: cover ; background-position: center;">
    <!-- Navbar -->
    <div class="navbar">
-    <a href="main.html" class="logo">
-        <img src="/assets/img/logo.png" alt="Logo Website">
+    <a href="/main" class="logo">
+        <img src="/img/logo.png" alt="Logo Website">
     </a>
     <div class="menu">
         <a href="#beranda">Beranda</a>
         <a href="#tentang">Fitur</a>
         <a href="#layanan">Artikel</a>
         <a href="#kontak">Tentang Kami</a>
-        <img class="profile-pic" src="/assets/img/ava.png" alt="Profile">
+        <img class="profile-pic" src="/img/ava.png" alt="Profile">
     </div>
 </div>
 
@@ -36,15 +40,13 @@
                     <input type="date" id="hpht" placeholder="HPHT">
                 </div>
 
-                <div class="date-input">
-                    <label for="hpl">HPL (Hari Perkiraan Lahir)</label>
-                    <input type="date" id="hpl" placeholder="HPL">
-                </div>
-
-                <button type="button" onclick="window.location.href='landing.html'">Daftar</button>
+                <button type="submit">Daftar</button>
             </form>
         </div>
     </div>
 
+
+    <script type="module" src="/js/firebase-init.js"></script>
+    <script type="module" src="/js/prohamil.js"></script>
 </body>
 </html>

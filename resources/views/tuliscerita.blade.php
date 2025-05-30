@@ -4,20 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Komunitas - Tulis Cerita</title>
-  <link rel="stylesheet" href="/CSS/tuliscerita.css" />
+  <link rel="stylesheet" href="/css/tuliscerita.css" />
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
   <div class="navbar">
-    <a href="main.html" class="logo">
-      <img src="/assets/img/logo.png" alt="Logo Website" />
+    <a href="/main" class="logo">
+      <img src="/img/logo.png" alt="Logo Website" />
     </a>
     <div class="menu">
       <a href="#beranda">Beranda</a>
       <a href="#fitur">Fitur</a>
       <a href="#artikel">Artikel</a>
       <a href="#tentang">Tentang Kami</a>
-      <img class="profile-pic" src="/assets/img/ava.png" alt="Profile" />
+      <img class="profile-pic" src="/img/ava.png" alt="Profile" />
     </div>
   </div>
 
@@ -28,7 +28,7 @@
         <button class="form-action" onclick="postingCerita()">Posting</button>
       </div>
       <div class="user-info">
-        <img src="/assets/img/ava.png" alt="Avatar">
+        <img src="/img/ava.png" alt="Avatar">
         <span>Indah</span>
       </div>
 
@@ -51,7 +51,7 @@
 
       <div class="post-item">
         <div class="post-header">
-          <img src="/assets/img/ava.png" alt="User Avatar" class="post-avatar" />
+          <img src="/img/ava.png" alt="User Avatar" class="post-avatar" />
           <div class="post-user-info">
             <span class="post-username">NamaUser</span>
             <span class="post-time">2 hari yang lalu</span>

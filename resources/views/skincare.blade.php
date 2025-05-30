@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rekomendasi Skincare</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="/CSS/skincare.css">
+    <link rel="stylesheet" href="/css/skincare.css">
 </head>
 <body>
     <div class="navbar">
-        <a href="main.html" class="logo">
-            <img src="/assets/img/logo.png" alt="Logo Website">
+        <a href="/main" class="logo">
+            <img src="/img/logo.png" alt="Logo Website">
         </a>
         <div class="menu">
-            <a href="main.html">Beranda</a>
-            <a href="landing.html">Fitur</a>
-            <a href="artikel.html">Artikel</a>
+            <a href="/main">Beranda</a>
+            <a href="/home">Fitur</a>
+            <a href="/artikel">Artikel</a>
             <a href="#kontak">Tentang Kami</a>
             <a href="#profil" class="fas fa-user-circle"></a>
         </div>
@@ -37,10 +38,12 @@
             <div class="filter-item">
                 <label>Jenis Kulit</label>
                 <div class="skin-type-options">
-                    <button data-skin-type="Dry" onclick="filterSkinType('Dry')">Kulit Kering</button>
-                    <button data-skin-type="Oily" onclick="filterSkinType('Oily')">Kulit Berminyak</button>
-                    <button data-skin-type="Combination" onclick="filterSkinType('Combination')">Kulit Kombinasi</button>
-                    <button data-skin-type="Sensitive" onclick="filterSkinType('Sensitive')">Kulit Sensitif</button>
+                    <button data-skin-type="all" onclick="filterSkinType('all')">Semua</button>
+                    <button data-skin-type="normal" onclick="filterSkinType('normal')">Kulit Normal</button>
+                    <button data-skin-type="sensitif" onclick="filterSkinType('sensitif')">Kulit Sensitif</button>
+                    <button data-skin-type="berjerawat" onclick="filterSkinType('berjerawat')">Kulit Berjerawat</button>
+                    <button data-skin-type="berminyak" onclick="filterSkinType('berminyak')">Kulit Berminyak</button>
+                    <button data-skin-type="kering" onclick="filterSkinType('kering')">Kulit Kering</button>
                 </div>
             <button onclick="applyFilters()">Terapkan Filter</button>
         </div>
@@ -61,7 +64,7 @@
         <div class="footer-container">
             <!-- Bagian Logo dan Tagline -->
             <div class="footer-section logo">
-                <img src="/assets/img/logoBB.png" alt="Belly Bloom Logo">
+                <img src="/img/logoBB.png" alt="Belly Bloom Logo">
                 <p class="tagline">Sehat dan Cantik Saat Hamil</p>
             </div>
     
@@ -72,12 +75,12 @@
                 <p>Telepon: +62 812 3456 7890</p>
                 <p>Alamat: Jl. Mawar No. 123, Surabaya</p>
             </div>
-    
+
             <!-- Bagian Aplikasi -->
             <div class="footer-section aplikasi">
                 <h3>Unduh Aplikasi</h3>
-                <a href="#"><img src="/assets/img/playstore.png" alt="Google Play"></a>
-                <a href="#"><img src="/assets/img/appstore.png" alt="App Store"></a>
+                <a href="#"><img src="/img/playstore.png" alt="Google Play"></a>
+                <a href="#"><img src="/img/appstore.png" alt="App Store"></a>
             </div>
     
             <!-- Bagian Sosial Media -->

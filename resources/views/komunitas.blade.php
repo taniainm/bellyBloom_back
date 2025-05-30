@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Komunitas</title>
   <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="stylesheet" href="/CSS/komunitas.css" />
+  <link rel="stylesheet" href="/css/komunitas.css" />
 </head>
 <body>
   <!-- Navbar -->
   <div class="navbar">
     <a href="main.html" class="logo">
-      <img src="/assets/img/logo.png" alt="Logo Website" />
+      <img src="/img/logo.png" alt="Logo Website" />
     </a>
     <div class="menu">
       <a href="#beranda">Beranda</a>
       <a href="#fitur">Fitur</a>
       <a href="#artikel">Artikel</a>
       <a href="#tentang">Tentang Kami</a>
-      <img class="profile-pic" src="/assets/img/ava.png" alt="Profile" />
+      <img class="profile-pic" src="/img/ava.png" alt="Profile" />
     </div>
   </div>
 
@@ -57,7 +57,7 @@
       </div>
 
       <div class="konten-kanan">
-        <a href="tuliscerita.html" class="box tulis-cerita-box">
+        <a href="/tuliscerita" class="box tulis-cerita-box">
           <i data-feather="edit-3"></i>
           <span>Tulis ceritamu di sini</span>
         </a>              
