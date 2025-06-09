@@ -1,3 +1,6 @@
+import { auth } from "./firebase-init.js";
+import { signOut } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+
 let editingId = null;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -11,6 +14,20 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("kategori").addEventListener("change", renderTable);
 
     renderTable();
+
+    // Logout handler
+    const logoutBtn = document.getElementById("logoutBtn");
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", async (e) => {
+            e.preventDefault();
+            try {
+                await signOut(auth);
+                window.location.href = "/login";
+            } catch (err) {
+                alert("Gagal logout: " + err.message);
+            }
+        });
+    }
 });
 
 async function fetchProducts() {
@@ -46,7 +63,7 @@ async function renderTable() {
                 <td>${product.brand}</td>
                 <td>${product.jenis}</td>
                 <td>${product.kandungan}</td>
-                <td>Rp${product.harga.toLocaleString()}</td>
+                <td>Rp${Number(product.harga).toLocaleString()}</td>
                 <td>${product.kategori_kulit}</td>
                 <td>
                     <button class="edit" onclick="editProduk(${
@@ -84,7 +101,18 @@ async function simpanProduk() {
             body: formData,
         });
 
-        if (!response.ok) throw new Error("Gagal menyimpan data");
+        if (!response.ok) {
+            // Ambil pesan error dari response
+            const errorData = await response.json();
+            if (errorData.errors && errorData.errors.gambar) {
+                alert(errorData.errors.gambar[0]);
+            } else if (errorData.message) {
+                alert(errorData.message);
+            } else {
+                alert("Gagal menyimpan data");
+            }
+            throw new Error("Gagal menyimpan data");
+        }
 
         renderTable();
         clearForm();
@@ -92,7 +120,7 @@ async function simpanProduk() {
         editingId = null;
     } catch (error) {
         console.error("Error:", error);
-        alert("Gagal menyimpan produk");
+        // Jangan alert lagi di sini, sudah di-handle di atas
     }
 }
 
@@ -171,3 +199,8 @@ toggleSidebar.addEventListener("click", () => {
     sidebar.classList.toggle("hidden");
     content.classList.toggle("full-width");
 });
+
+window.simpanProduk = simpanProduk;
+window.batalEdit = batalEdit;
+window.editProduk = editProduk;
+window.hapusProduk = hapusProduk;

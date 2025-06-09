@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 try {
                     isLoggingOut = true;
                     await signOut(auth);
-                    window.location.href = "/main";
+                    window.location.href = "/";
                 } catch (error) {
                     alert("Gagal logout: " + error.message);
                 }
@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
             await deleteUser(user);
 
             alert("Akun berhasil dihapus");
-            window.location.href = "/main";
+            window.location.href = "/";
         } catch (error) {
             if (error.code === "auth/requires-recent-login") {
                 alert(

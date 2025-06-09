@@ -6,19 +6,19 @@ body {
     color: #000;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    color: rgb(0, 0, 0); 
+    font-family: "Segoe UI", sans-serif;
+    color: rgb(0, 0, 0);
 }
 
 .navbar {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
     position: fixed;
-    z-index: 1000; 
+    z-index: 1000;
     width: 100%;
 }
 
@@ -38,16 +38,16 @@ body {
 
 .navbar .logo img {
     float: left;
-    height: 40px; 
+    height: 40px;
     width: auto;
 }
 
 .navbar .btn-signup {
-    margin-left: auto; 
+    margin-left: auto;
     background-color: #f0dee2;
     border: 1px solid white;
     border-radius: 60px;
-    height : 10px;
+    height: 10px;
     width: auto;
 }
 
@@ -59,7 +59,7 @@ body {
 h1 {
     padding-top: 60px;
     font-size: 45px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -84,22 +84,21 @@ h1 {
 }
 
 .hero-right {
-    max-width: 500px; 
+    max-width: 500px;
     padding: 20px;
 }
 
 .hero-left {
-    max-width: 500px; 
+    max-width: 500px;
     padding: 20px;
     text-align: center;
-    margin-left : 40px;
+    margin-left: 40px;
 }
-
 
 .hero-left form {
     display: flex;
-    flex-direction: column; 
-    gap: 50px; 
+    flex-direction: column;
+    gap: 50px;
 }
 
 .hero-left input {
@@ -112,7 +111,7 @@ h1 {
 }
 
 .hero-left input:focus {
-    border-color: #f0dee2; 
+    border-color: #f0dee2;
 }
 
 .hero-left button {
@@ -141,6 +140,30 @@ button {
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px; 
+    max-width: 400px;
     margin: auto;
+}
+
+/* Style untuk password toggle */
+.password-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px; /* Jarak antara input password dan button */
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #777;
+    z-index: 10;
+}
+
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding-right: 35px; /* Beri ruang untuk ikon mata */
+    box-sizing: border-box;
 }

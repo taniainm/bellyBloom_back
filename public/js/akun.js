@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 try {
                     isLoggingOut = true;
                     await signOut(auth);
-                    window.location.href = "/main";
+                    window.location.href = "/";
                 } catch (error) {
                     alert("Gagal logout: " + error.message);
                 }
@@ -166,7 +166,7 @@ async function deleteAccount(auth) {
         await deleteUser(user);
 
         alert("Akun berhasil dihapus");
-        window.location.href = "/main"; // Redirect ke halaman logout
+        window.location.href = "/"; // Redirect ke halaman logout
     } catch (error) {
         console.error("Error deleting account:", error);
 

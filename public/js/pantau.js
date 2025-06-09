@@ -1,7 +1,18 @@
+import { auth } from "./firebase-init.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+
+// Cek login saat halaman dibuka
+onAuthStateChanged(auth, (user) => {
+    if (!user) {
+        alert("Anda harus login terlebih dahulu untuk mengakses halaman ini.");
+        window.location.href = "/login";
+    }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     const buttonContainer = document.getElementById("buttonContainer");
     const judulPerkembangan = document.getElementById("judulPerkembangan");
-    const ilustrasi = document.querySelector(".ilustrasi");
+    const ilustrasi = document.getElementById("ilustrasi");
     const weekInput = document.getElementById("weekInput");
     const pilihButton = document.getElementById("pilihButton");
 
@@ -67,6 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
             judulPerkembangan.textContent = `Perkembangan Janin Minggu ke-${week}`;
             mingguKalender.textContent = `Minggu ${week}`;
             janinImage.src = data.gambar
+                ? `/storage/${data.gambar}`
+                : "/img/default.jpg";
+            ilustrasi.src = data.gambar
                 ? `/storage/${data.gambar}`
                 : "/img/default.jpg";
             ukuranJanin.textContent = data.berat;

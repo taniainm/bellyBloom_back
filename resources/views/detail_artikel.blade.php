@@ -13,12 +13,11 @@
             <img src="/img/logo.png" alt="Logo Website">
         </a>
         <div class="menu">
-            <a href="#search"><i class="fas fa-search"></i></a>
-            <a href="#beranda">Beranda</a>
+            <a href="/main">Beranda</a>
             <a href="/home">Fitur</a>
-            <a href="/artikel">Artikel</a>
+            <a href="/artikel" class="nav-link active">Artikel</a>
             <a href="#kontak">Tentang Kami</a>
-            <a href="#profil" class="fas fa-user-circle"></a>
+            <a href="/akun" class="fas fa-user-circle"></a>
         </div>
     </div>
 
@@ -66,6 +65,6 @@
         </div>
     </footer>
 
-    <script src="/JS/detail_artikel.js"></script>
+    <script src="/js/detail_artikel.js"></script>
 </body>
 </html>

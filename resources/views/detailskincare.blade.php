@@ -8,15 +8,15 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="/main" class="logo">
+        <a href="/" class="logo">
             <img src="/img/logo.png" alt="Logo Website">
         </a>
         <div class="menu">
-            <a href="/main">Beranda</a>
+            <a href="/">Beranda</a>
             <a href="/home" class="nav-link active">Fitur</a>
             <a href="/artikel">Artikel</a>
             <a href="#kontak">Tentang Kami</a>
-            <a href="#profil" class="fas fa-user-circle"></a>
+            <a href="/akun" class="fas fa-user-circle"></a>
         </div>
     </div>
 
@@ -88,6 +88,6 @@
         </div>
     </footer>
 
-    <script src="/JS/detailskincare.js"></script>
+    <script src="/js/detailskincare.js"></script>
 </body>
 </html>

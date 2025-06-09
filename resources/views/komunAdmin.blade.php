@@ -18,8 +18,8 @@
         <li><a href="/artikelAdmin">Artikel</a></li>
         <li><a href="/komunitasAdmin" class="dibuka">Komunitas</a></li>
         <li><a href="/user">Pengguna</a></li>
-        <li><a href="/laporanAdmin">Laporan</a></li>
         <li><a href="/setAdmin">Pengaturan</a></li>
+        <li><a href="#" id="logoutBtn">Logout</a></li>
     </ul>
 </div>
 
@@ -41,25 +41,8 @@
   <h1>Moderasi Komunitas</h1>
 
   <div id="komunitas"></div>
-
-  <div id="alasanModal" class="modal hidden">
-    <div class="modal-content">
-      <h3>Pilih Alasan untuk Menyembunyikan Postingan</h3>
-      <select id="alasanSelect">
-        <option value="" disabled selected>Pilih alasan</option>
-        <option value="Melanggar panduan komunitas">Melanggar panduan komunitas</option>
-        <option value="Bahasa kasar">Bahasa kasar</option>
-        <option value="Spam">Spam</option>
-        <option value="Konten tidak relevan">Konten tidak relevan</option>
-      </select>
-      <div class="modal-buttons">
-        <button id="confirmAlasan" class="btn-success">Konfirmasi</button>
-        <button id="cancelAlasan" class="btn-cancel">Batal</button>
-      </div>
-    </div>
-  </div>
 </section>
 
-  <script src="/JS/komunAdmin.js"></script>
+  <script type="module" src="/js/komunAdmin.js"></script>
 </body>
 </html>

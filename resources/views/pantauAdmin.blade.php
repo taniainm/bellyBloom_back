@@ -18,8 +18,8 @@
             <li><a href="/artikelAdmin">Artikel</a></li>
             <li><a href="/komunitasAdmin">Komunitas</a></li>
             <li><a href="/user">Pengguna</a></li>
-            <li><a href="/laporanAdmin">Laporan</a></li>
             <li><a href="/setAdmin">Pengaturan</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
         </ul>
     </div>
     
@@ -67,6 +67,7 @@
   </div>
     </section>
 
+  <script type="module" src="/js/firebase-init.js"></script>
   <script type="module" src="/js/pantauAdmin.js"></script>
 </body>
 </html>

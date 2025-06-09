@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="/css/akun.css">
     <title>Profil Ibu Hamil</title>
 
@@ -11,15 +12,15 @@
 
 <!-- Navbar -->
 <div class="navbar">
-    <a href="/main" class="logo">
+    <a href="/" class="logo">
         <img src="/img/logo.png" alt="Logo Website">
     </a>
     <div class="menu">
-        <a href="#beranda">Beranda</a>
-        <a href="#tentang">Fitur</a>
-        <a href="#layanan">Artikel</a>
+        <a href="/">Beranda</a>
+        <a href="/home">Fitur</a>
+        <a href="/artikel">Artikel</a>
         <a href="#kontak">Tentang Kami</a>
-        <img class="profile-pic" src="/img/ava.png" alt="Profile">
+        <a href="/akun" class="fas fa-user-circle"></a>
     </div>
 </div>
 
@@ -41,11 +42,7 @@
         <h1>Akun</h1>
         <div class="card">
             <div class="avatar-section">
-                <img src="/img/ava.png" alt="Avatar" class="avatar">
-                <div class="avatar-buttons">
-                    <button class="btn-upload">Unggah</button>
-                    <button class="btn-delete">Hapus</button>
-                </div>
+                <i class="fas fa-user-circle avatar"></i>
             </div>
             <form>
                 <label for="nama">Nama</label>

@@ -10,11 +10,11 @@
 <body>
         <!-- Navbar -->
         <div class="navbar">
-            <a href="/main" class="logo">
+            <a href="/" class="logo">
                 <img src="img/logo.png" alt="Logo Website">
             </a>
             <div class="menu">  
-                <a href="/main" class="nav-link active" >Beranda</a>
+                <a href="/" class="nav-link active" >Beranda</a>
                 <a href="/home">Fitur</a>
                 <a href="/artikel">Artikel</a>
                 <a href="#kontak">Tentang Kami</a>

@@ -1,3 +1,14 @@
+import { auth } from "./firebase-init.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+
+// Cek login saat halaman dibuka
+onAuthStateChanged(auth, (user) => {
+    if (!user) {
+        alert("Anda harus login terlebih dahulu untuk mengakses halaman ini.");
+        window.location.href = "/login";
+    }
+});
+
 let skincareData = [];
 let currentPage = 1;
 const itemsPerPage = 8;
@@ -116,3 +127,11 @@ function goToDetailPage(productName) {
 
 // Initial render
 fetchSkincareData();
+
+// global event listeners
+window.searchSkincare = searchSkincare;
+window.filterSkinType = filterSkinType;
+window.updatePriceLabel = updatePriceLabel;
+window.applyFilters = applyFilters;
+window.toggleFilterBox = toggleFilterBox;
+window.changePage = changePage;

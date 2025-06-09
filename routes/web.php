@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
 
 Route::get('/home', function () {
@@ -71,10 +71,6 @@ Route::get('/komunitasAdmin', function () {
     return view('komunAdmin');
 });
 
-Route::get('/laporanAdmin', function () {
-    return view('laporanAdmin');
-});
-
 Route::get('/perkembanganAdmin', function () {
     return view('pantauAdmin');
 }); 
@@ -91,10 +87,6 @@ Route::get('/tuliscerita', function () {
     return view('tuliscerita');
 });
 
-Route::get('/main', function () {
-    return view('main');
-});
-
 use App\Http\Controllers\JaninController;
 Route::get('/janin', [JaninController::class, 'index'])->name('janin.index');
 Route::get('/janin/create', [JaninController::class, 'create'])->name('janin.create');
@@ -109,7 +101,23 @@ Route::post('/care', [SkincareController::class, 'store'])->name('skincare.store
 Route::put('/care/{id}', [SkincareController::class, 'update'])->name('skincare.update');
 Route::delete('/care/{id}', [SkincareController::class, 'destroy'])->name('skincare.destroy');
 
+use App\Http\Controllers\ArtikelController;
+Route::prefix('articles')->group(function() {
+    Route::post('/', [ArtikelController::class, 'store']);
+    Route::put('/{id}', [ArtikelController::class, 'update']);
+    Route::delete('/{id}', [ArtikelController::class, 'destroy']);
+});
+
 Route::prefix('api')->group(function() {
     Route::get('/perkembangan', [JaninController::class, 'apiIndex']);
     Route::get('/care', [SkincareController::class, 'index']);
+    Route::get('/articlesApi', [ArtikelController::class, 'index']);
+    Route::get('/articleCount', function () {
+    $count = \DB::table('artikels')->count();
+    return response()->json(['count' => $count]);
+});
+Route::get('/skincareCount', function () {
+    $count = \DB::table('skincare')->count();
+    return response()->json(['count' => $count]);
+});
 });

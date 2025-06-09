@@ -9,7 +9,6 @@
     <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js"></script>
-
 </head>
 <body style="background: url('img/backSign.jpg'); background-size: cover ; background-position: center;">
     <div class="navbar">
@@ -34,10 +33,19 @@
     <div class="hero-right">
         <h1><b>Sign Up</b></h1>
         <div class="container">
-        <form>
+        <form id="signupForm">
             <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="password" name="password2" placeholder="Confirm Password" required>
+            
+            <div class="password-container">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <i class="fas fa-eye password-toggle" id="togglePassword"></i>
+            </div>
+            
+            <div class="password-container">
+                <input type="password" name="password2" id="confirmPassword" placeholder="Confirm Password" required>
+                <i class="fas fa-eye password-toggle" id="toggleConfirmPassword"></i>
+            </div>
+            
             <input type="text" name="phone" id="phone" placeholder="Phone" required>
             <button type="submit">Sign Up</button>
         </form>
@@ -46,5 +54,6 @@
 
     <script type="module" src="/js/firestore-init.js"></script>
     <script type="module" src="/js/signup.js"></script>
+    <script src="/js/password-toggle.js"></script>
 </body>
 </html>

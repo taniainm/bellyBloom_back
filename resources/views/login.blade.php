@@ -12,11 +12,11 @@
 </head>
 <body style="background: url('img/backLog.jpg'); background-size: cover ; background-position: center;">
     <div class="navbar">
-        <a href="/main" class="logo">
+        <a href="/" class="logo">
             <img src="/img/logo.png" alt="Logo Website">
         </a>
         <div class="menu">
-            <a href="/main">Beranda</a>
+            <a href="/">Beranda</a>
             <a href="/home">Fitur</a>
             <a href="/artikel">Artikel</a>
             <a href="#kontak">Tentang Kami</a>
@@ -30,7 +30,10 @@
         <div class="container">
         <form id="loginForm">
             <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
+            <div class="password-container">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <i class="fas fa-eye password-toggle" id="togglePassword"></i>
+            </div>
             <button type="submit">Login</button>
         </form>
         </div>
@@ -39,6 +42,6 @@
     </div>
     <script type="module" src="/js/firebase-init.js"></script>
     <script type="module" src="/js/login.js"></script>
-
+    <script src="/js/password-toggle.js"></script>
 </body>
 </html>

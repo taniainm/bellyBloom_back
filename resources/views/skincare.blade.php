@@ -11,15 +11,15 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="/main" class="logo">
+        <a href="/" class="logo">
             <img src="/img/logo.png" alt="Logo Website">
         </a>
         <div class="menu">
-            <a href="/main">Beranda</a>
+            <a href="/">Beranda</a>
             <a href="/home">Fitur</a>
             <a href="/artikel">Artikel</a>
             <a href="#kontak">Tentang Kami</a>
-            <a href="#profil" class="fas fa-user-circle"></a>
+            <a href="/akun" class="fas fa-user-circle"></a>
         </div>
     </div>
     <header>
@@ -99,6 +99,7 @@
         </div>
     </footer>
 
-    <script src="/Js/skincare.js"></script>
+    <script type="module" src="/js/artikel.js"></script>
+    <script type="module" src="/js/skincare.js"></script>
 </body>
 </html>

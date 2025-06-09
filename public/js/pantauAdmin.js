@@ -1,3 +1,23 @@
+import { auth } from "./firebase-init.js";
+import { signOut } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+
+// ...existing code...
+
+document.addEventListener("DOMContentLoaded", () => {
+    const logoutBtn = document.getElementById("logoutBtn");
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", async (e) => {
+            e.preventDefault();
+            try {
+                await signOut(auth);
+                window.location.href = "/login";
+            } catch (err) {
+                alert("Gagal logout: " + err.message);
+            }
+        });
+    }
+});
+
 let weeks = [];
 
 const listDiv = document.getElementById("listMinggu");

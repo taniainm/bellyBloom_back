@@ -6,7 +6,6 @@
     <title>Dashboard Admin</title>
     <link rel="stylesheet" href="/css/dashboardAdm.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <script defer src="/JS/dashboardAdm.js"></script>
 </head>
 <body>
     
@@ -19,8 +18,8 @@
             <li><a href="/artikelAdmin">Artikel</a></li>
             <li><a href="/komunitasAdmin">Komunitas</a></li>
             <li><a href="/user">Pengguna</a></li>
-            <li><a href="/laporanAdmin">Laporan</a></li>
             <li><a href="/setAdmin">Pengaturan</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
         </ul>
     </div>
     
@@ -28,15 +27,6 @@
         <!-- NAVBAR -->
         <nav class="navbar">
             <button id="toggleSidebar" class="toggle-btn">☰</button>
-            <form action="#">
-                <div class="form-input">
-                    <input type="search" placeholder="Search...">
-                    <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
-                </div>
-            </form>
-            <a href="#" class="profile">
-                <img src="/img/fitskin.jpg">
-            </a>
         </nav>
 
     <div class="main-content">
@@ -54,14 +44,13 @@
                 <p id="articleCount">45</p>
             </div>
             <div class="card">
-                <h3>Komunitas</h3>
-                <p id="communityPosts">78</p>
-            </div>
-            <div class="card">
-                <h3>Laporan</h3>
-                <p id="reportCount">5</p>
+                <h3>Skincare</h3>
+                <p id="skincareCount">78</p>
             </div>
         </section>
 </section>
+
+<script type= "module" src="/js/firebase-init.js"></script>
+<script type= "module" src="/js/dashboardAdm.js"></script>
 </body>
 </html>

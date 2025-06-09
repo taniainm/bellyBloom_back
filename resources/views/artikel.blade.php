@@ -14,9 +14,9 @@
         </a>
         <div class="menu">
             <a href="/main">Beranda</a>
-            <a href="/home">Fitur</a>
+            <a href="/home" >Fitur</a>
             <a href="/artikel" class="nav-link active">Artikel</a>
-            <a href="#footer">Tentang Kami</a>
+            <a href="#kontak">Tentang Kami</a>
             <a href="/akun" class="fas fa-user-circle"></a>
         </div>
     </div>
@@ -74,6 +74,6 @@
             <p>&copy; 2025 Belly Bloom. All Rights Reserved.</p>
         </div>
     </footer>
-    <script src="/JS/artikel.js"></script>
+    <script type="module" src="/js/artikel.js"></script>
 </body>
 </html>

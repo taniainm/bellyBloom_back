@@ -7,7 +7,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.querySelector("form"); // atau pakai id jika kamu pakai <form id="loginForm">
+    const loginForm = document.querySelector("form");
 
     if (loginForm) {
         loginForm.addEventListener("submit", async (e) => {
@@ -17,18 +17,31 @@ document.addEventListener("DOMContentLoaded", () => {
             const password = loginForm.password.value;
 
             try {
-                // Atur session persistence
+                // 1. Atur persistence
                 await setPersistence(auth, browserSessionPersistence);
 
-                // Login dengan email dan password
+                // 2. Login dengan Firebase
                 const userCredential = await signInWithEmailAndPassword(
                     auth,
                     email,
                     password
                 );
 
-                alert("Login berhasil!");
-                window.location.href = "/home";
+                // 3. Dapatkan token TERBARU dengan claims
+                const user = userCredential.user;
+                await user.getIdToken(true); // Force refresh token
+                const tokenResult = await user.getIdTokenResult();
+
+                // 4. Cek role dari custom claims
+                const role = tokenResult.claims.role;
+                console.log("Role:", role);
+
+                // 5. Redirect berdasarkan role
+                if (role === "admin") {
+                    window.location.href = "/admin";
+                } else {
+                    window.location.href = "/home";
+                }
             } catch (error) {
                 alert(`Login gagal: ${error.message}`);
             }

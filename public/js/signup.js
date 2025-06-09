@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             await setDoc(doc(db, "users", user.uid), {
                 email,
                 phone,
+                role: "user", // Default role
             });
 
             alert("Akun berhasil dibuat!");

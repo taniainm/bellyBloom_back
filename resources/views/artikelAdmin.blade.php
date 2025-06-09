@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kelola Artikel Kesehatan</title>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="/css/artikelAdmin.css">
 </head>
@@ -18,67 +19,58 @@
         <li><a href="/artikelAdmin" class="dibuka">Artikel</a></li>
         <li><a href="/komunitasAdmin">Komunitas</a></li>
         <li><a href="/user">Pengguna</a></li>
-        <li><a href="/laporanAdmin">Laporan</a></li>
         <li><a href="/setAdmin">Pengaturan</a></li>
+        <li><a href="#" id="logoutBtn">Logout</a></li>
     </ul>
-</div>
+  </div>
 
-<section id="content">
+  <section id="content">
     <!-- NAVBAR -->
     <nav class="navbar">
         <button id="toggleSidebar" class="toggle-btn">☰</button>
-        <form action="#">
-            <div class="form-input">
-                <input type="search" placeholder="Search...">
-                <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
-            </div>
-        </form>
-        <a href="#" class="profile">
-            <img src="/img/fitskin.jpg">
         </a>
     </nav>
 
-  <div class="container">
-    <h1>Manajemen Artikel Kesehatan</h1>
+    <div class="container">
+      <h1>Manajemen Artikel Kesehatan</h1>
 
-    <button id="btnTambah" onclick="toggleForm()">+ Tambah Artikel Baru</button>
+      <button id="btnTambah" type="button">+ Tambah Artikel Baru</button>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Judul Artikel</th>
-          <th>Penulis</th>
-          <th>Tanggal Posting</th>
-          <th>Status</th>
-          <th>Aksi</th>
-        </tr>
-      </thead>
-      <tbody id="artikelList">
-        <!-- Data artikel akan digenerate oleh JS -->
-      </tbody>
-    </table>
+      <table>
+        <thead>
+          <tr>
+            <th>Gambar</th>
+            <th>Judul Artikel</th>
+            <th>Penulis</th>
+            <th>Konten</th>
+            <th>Tanggal Posting</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="artikelList">
+        </tbody>
+      </table>
 
-    <!-- Form untuk menambah/edit artikel -->
-    <div class="form-container" id="formArtikel" style="display: none;">
-      <h2 id="formTitle">Tambah Artikel</h2>
-      <input type="hidden" id="editIndex">
-      <input type="text" id="judul" placeholder="Judul Artikel" required>
-      <textarea id="konten" placeholder="Konten Artikel" required></textarea>
-      <input type="text" id="penulis" placeholder="Penulis" required>
-      <input type="date" id="tanggal" required>
-      <select id="status">
-        <option value="" disabled selected>Pilih Status</option>
-        <option value="draft">Draft</option>
-        <option value="published">Published</option>
-      </select>
-      <div class="form-buttons">
-        <button onclick="simpanArtikel()">Simpan</button>
-        <button onclick="batalArtikel()">Batal</button>
-      </div>
+      <!-- Form untuk menambah/edit artikel -->
+      <div class="form-container" id="formArtikel" style="display: none;">
+  <h2 id="formTitle">Tambah Artikel</h2>
+  <form id="artikelForm" enctype="multipart/form-data" onsubmit="event.preventDefault(); saveArtikel();">
+    <input type="hidden" id="editIndex">
+    <input type="text" id="judul" placeholder="Judul Artikel" required>
+    <textarea id="konten" placeholder="Konten Artikel" required></textarea>
+    <input type="text" id="penulis" placeholder="Penulis" required>
+    <input type="date" id="tanggal" required>
+    <input type="file" id="gambar" accept="image/*">
+    <div class="form-buttons">
+      <button type="submit">Simpan</button>
+      <button type="button" onclick="batalArtikel()">Batal</button>
     </div>
-  </div>
-</section>
+  </form>
+</div>
+    </div>
+  </section>
 
-  <script src="/JS/artikelAdmin.js"></script>
+  <script type="module" src="/js/firebase-init.js"></script>
+  <script type="module" src="/js/artikelAdmin.js"></script>
 </body>
 </html>

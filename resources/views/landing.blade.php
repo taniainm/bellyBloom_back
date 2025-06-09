@@ -9,11 +9,11 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="/main" class="logo">
+        <a href="/" class="logo">
             <img src="/img/logo.png" alt="Logo Website">
         </a>
         <div class="menu">
-            <a href="/main">Beranda</a>
+            <a href="/">Beranda</a>
             <a href="/home" class="nav-link active">Fitur</a>
             <a href="/artikel">Artikel</a>
             <a href="#kontak">Tentang Kami</a>
@@ -103,7 +103,8 @@
         </div>
     </footer>    
 
-    <script src="/JS/landing.js"></script>
+    <script type="module" src="/js/artikel.js"></script>
+    <script type="module" src="/js/landing.js"></script>
 
 
 </body>

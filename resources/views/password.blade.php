@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Ubah Password</title>
     <link rel="stylesheet" href="/css/password.css">
 </head>
 <body>
     <!-- Navbar -->
     <div class="navbar">
-        <a href="/main" class="logo">
+        <a href="/" class="logo">
             <img src="/img/logo.png" alt="Logo Website">
         </a>
         <div class="menu">
-            <a href="#beranda">Beranda</a>
-            <a href="#fitur">Fitur</a>
-            <a href="#artikel">Artikel</a>
-            <a href="#tentang">Tentang Kami</a>
-            <img class="profile-pic" src="/img/ava.png" alt="Profile">
+            <a href="/">Beranda</a>
+            <a href="/home" class="nav-link active">Fitur</a>
+            <a href="/artikel">Artikel</a>
+            <a href="#kontak">Tentang Kami</a>
+            <a href="/akun" class="fas fa-user-circle"></a>
         </div>
     </div>
 
@@ -39,7 +40,7 @@
             <h1>Password</h1>
             <div class="card card-flex">
                 <div class="password-avatar">
-                    <img src="/img/ava.png" alt="Avatar" class="avatar-big">
+                    <i class="fas fa-user-circle avatar"></i>
                 </div>
                 <form>
                     <label for="password-lama">Password saat ini</label>
