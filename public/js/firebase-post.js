@@ -10,6 +10,7 @@ import {
     serverTimestamp,
     doc,
     getDoc,
+    deleteDoc,
 } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
 
 class PostService {
@@ -77,6 +78,10 @@ class PostService {
         );
         const snapshot = await getDocs(q);
         return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+    }
+
+    static async deletePost(postId) {
+        await deleteDoc(doc(db, "posts", postId));
     }
 }
 

@@ -129,7 +129,11 @@ export class PostUI {
                 this.createPostsContainer();
 
             postsContainer.innerHTML = "";
-            posts.forEach((post) => this.addPostToUI(post, postsContainer));
+            for (const post of posts) {
+                // Ambil jumlah komentar untuk setiap post
+                const commentCount = await this.getCommentCount(post.id);
+                this.addPostToUI({ ...post, commentCount }, postsContainer);
+            }
         } catch (error) {
             console.error("Error loading posts:", error);
         }
@@ -140,6 +144,15 @@ export class PostUI {
         container.className = "posts-container";
         document.querySelector(".right-panel").appendChild(container);
         return container;
+    }
+
+    async getCommentCount(postId) {
+        const q = query(
+            collection(db, "comments"),
+            where("postId", "==", postId)
+        );
+        const snapshot = await getDocs(q);
+        return snapshot.size;
     }
 
     addPostToUI(post, container = null) {

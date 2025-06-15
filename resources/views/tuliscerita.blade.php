@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Komunitas - Tulis Cerita</title>
   <link rel="stylesheet" href="/css/tuliscerita.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
@@ -17,7 +18,7 @@
       <a href="#fitur">Fitur</a>
       <a href="#artikel">Artikel</a>
       <a href="#tentang">Tentang Kami</a>
-      <img class="profile-pic" src="/img/ava.png" alt="Profile" />
+      <a href="/akun" class="fas fa-user-circle"></a>
     </div>
   </div>
 
