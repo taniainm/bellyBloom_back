@@ -98,7 +98,7 @@ form.onsubmit = async function (e) {
 
     if (editId) {
         url = `/janin/update/${editId}`;
-        formData.append("_method", "PUT");
+        formData.append("_method", "POST");
     }
 
     try {

@@ -12,7 +12,7 @@ onAuthStateChanged(auth, (user) => {
 document.addEventListener("DOMContentLoaded", function () {
     const buttonContainer = document.getElementById("buttonContainer");
     const judulPerkembangan = document.getElementById("judulPerkembangan");
-    const ilustrasi = document.getElementById("ilustrasi");
+    const ilustrasi = document.querySelector(".ilustrasi");
     const weekInput = document.getElementById("weekInput");
     const pilihButton = document.getElementById("pilihButton");
 
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fungsi untuk memperbarui tampilan berdasarkan minggu
     function updateContent(week) {
-        const data = janinData.find((item) => item.minggu === week);
+        const data = janinData.find((item) => Number(item.minggu) == week);
 
         if (data) {
             // Update semua elemen tampilan
@@ -80,9 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
             janinImage.src = data.gambar
                 ? `/storage/${data.gambar}`
                 : "/img/default.jpg";
-            ilustrasi.src = data.gambar
-                ? `/storage/${data.gambar}`
-                : "/img/default.jpg";
+            if (ilustrasi) {
+                ilustrasi.src = data.gambar
+                    ? `/storage/${data.gambar}`
+                    : "/img/default.jpg";
+            }
             ukuranJanin.textContent = data.berat;
             panjangJanin.textContent = data.panjang;
             detakJantung.textContent = data.detak;

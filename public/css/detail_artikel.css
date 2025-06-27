@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: "Segoe UI", sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
@@ -16,7 +16,7 @@ body {
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    z-index: 1000; 
+    z-index: 1000;
     width: 100%;
     top: 0;
     left: 0;
@@ -38,7 +38,7 @@ body {
 
 .navbar .logo img {
     float: left;
-    height: 40px; 
+    height: 40px;
     width: auto;
 }
 
@@ -67,18 +67,11 @@ body {
     margin-bottom: 20px;
 }
 
-/* Tanggal artikel */
-.article-detail p:first-of-type {
+.article-detail p {
+    text-align: justify;
     font-size: 14px;
-    color: #666;
+    color: #3d3c3c;
     margin-bottom: 20px;
-}
-
-/* Konten artikel */
-.article-detail p:last-of-type {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #444;
 }
 
 /* Responsif */
@@ -95,7 +88,6 @@ body {
         font-size: 16px;
     }
 }
-
 
 .footer {
     background: rgba(242, 175, 175, 0.27);

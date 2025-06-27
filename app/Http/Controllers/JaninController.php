@@ -83,7 +83,10 @@ class JaninController extends Controller
             'gambar' => $gambarPath,
         ]);
 
-        return redirect()->back()->with('success', 'Data berhasil diupdate!');
+        return response()->json([
+        'success' => true,
+        'message' => 'Data berhasil diupdate'
+    ]);
     }
 
     // Hapus data
